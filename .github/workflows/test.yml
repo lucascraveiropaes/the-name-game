@@ -30,8 +30,8 @@ jobs:
 
       - name: Setup environment variables
         run: |
-          echo "JWT_SECRET=${{ variables.JWT_SECRET }}" >> .env
-          echo "API_URL=${{ variables.API_URL }}" >> .env
+          echo "JWT_SECRET=${{ vars.JWT_SECRET }}" >> .env
+          echo "API_URL=${{ vars.API_URL }}" >> .env
 
       - name: Run tests
         run: npm run test
