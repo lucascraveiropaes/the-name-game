@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 export default function Game() {
   const mutation = useMutation({
-    mutationFn: () => client.post("/game/start", { mode: "easy" }),
+    mutationFn: () => client.post("/game/start", { mode: "practice" }),
     onSuccess: (data) => {
       console.log("Game started successfully", data);
     },

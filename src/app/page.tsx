@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function HomePage() {
   const onClick = () => fetch("/api/game/start", {
     method: "POST",
-    body: JSON.stringify({ mode: "easy" }),
+    body: JSON.stringify({ mode: "practice" }),
     headers: {
       "Content-Type": "application/json",
     },

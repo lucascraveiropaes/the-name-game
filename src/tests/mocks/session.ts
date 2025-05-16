@@ -6,7 +6,7 @@ export function createMockToken(overrides?: Partial<GameSessionJWT>): string {
   const payload = {
     sessionId: "mock-session",
     createdAt: new Date(),
-    mode: "easy",
+    mode: "practice",
     targetName: "John Doe",
     options: [
       { id: "1", alt: "John Doe", imageUrl: "", },
