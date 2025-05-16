@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
 
   return NextResponse.json(session, {
     headers: {
-      "Set-Cookie": `game-token=${token}; Path=/; HttpOnly; Max-Age=600; SameSite=Lax; Secure`,
+      "Set-Cookie": `game-token=${token}; Path=/; Max-Age=600; SameSite=Lax; Secure`,
     },
   });
 }

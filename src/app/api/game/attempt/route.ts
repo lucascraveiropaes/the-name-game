@@ -28,15 +28,6 @@ export async function POST(req: NextRequest) {
 
   session.attempts.push({ selectedId, correct, duration });
 
-  if (session.attempts.length >= 5) {
-    const newToken = jwt.sign(session, ENV.JWT_SECRET!, { expiresIn: "10m" });
-    return NextResponse.json({ correct, gameOver: true }, {
-      headers: {
-        "Set-Cookie": `game-token=${newToken}; Path=/; HttpOnly; Max-Age=600; SameSite=Lax; Secure`,
-      },
-    });
-  }
-
   const profiles = await fetch(ENV.API_URL + "/profiles").then(res => res.json());
   const selected = profiles.sort(() => 0.5 - Math.random()).slice(0, 6);
   const target = selected[Math.floor(Math.random() * selected.length)];
@@ -61,7 +52,7 @@ export async function POST(req: NextRequest) {
     },
     {
       headers: {
-        "Set-Cookie": `game-token=${newToken}; Path=/; HttpOnly; Max-Age=600; SameSite=Lax; Secure`,
+        "Set-Cookie": `game-token=${newToken}; Path=/; Max-Age=600; SameSite=Lax; Secure`,
       },
     }
   );

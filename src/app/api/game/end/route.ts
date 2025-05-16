@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { differenceInSeconds } from "date-fns";
 import { GameSessionJWT } from "@/types";
 import jwt from "jsonwebtoken";
 import ENV from "@/env";
