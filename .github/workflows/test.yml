@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 env:
-  NODE_ENV: test
+  NODE_ENV: development
 
 jobs:
   test:
@@ -30,8 +30,8 @@ jobs:
 
       - name: Setup environment variables
         run: |
-          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
-          echo "API_URL=${{ secrets.API_URL }}" >> .env
+          echo "JWT_SECRET=${{ variables.JWT_SECRET }}" >> .env
+          echo "API_URL=${{ variables.API_URL }}" >> .env
 
       - name: Run tests
         run: npm run test
