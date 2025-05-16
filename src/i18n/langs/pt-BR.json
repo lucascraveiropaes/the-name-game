@@ -1,0 +1,8 @@
+{
+  "welcome": "Bem vindo ao jogo!",
+  "score": "Sua pontuação é {score}",
+  "homepage": {
+    "heading": "Tente combinar os funcionários da WillowTree com a foto correta.",
+    "button": "Jogar!"
+  }
+}

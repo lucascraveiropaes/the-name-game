@@ -1,3 +1,4 @@
+import { useLocale } from "next-intl";
 import { twMerge } from "tailwind-merge"
 
 const variants = {
@@ -17,6 +18,7 @@ const sizes = {
 }
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  keepLocale?: boolean;
   variant?: keyof typeof variants;
   size?: keyof typeof sizes;
   as?: React.ElementType;
@@ -25,7 +27,15 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const baseStyle = "rounded-md font-light transition text-center";
 
-export const Button = ({ variant = "default", size = "md", className, as, ...props }: ButtonProps) => {
+export const Button = ({ variant = "default", size = "md", className, as, keepLocale = true, ...props }: ButtonProps) => {
   const Component = as || "button";
-  return <Component className={twMerge(variants[variant], sizes[size], baseStyle, className)} {...props} />
+  const locale = useLocale();
+  const extraProps: ButtonProps = {
+    className: twMerge(variants[variant], sizes[size], baseStyle, className),
+  }
+
+  if (props.href)
+    extraProps.href = keepLocale ? `/${locale}${props.href}` : props.href;
+
+  return <Component {...props} {...extraProps} />
 }

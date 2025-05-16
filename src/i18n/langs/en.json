@@ -1,0 +1,8 @@
+{
+  "welcome": "Welcome to the game!",
+  "score": "Your score is {score}",
+  "homepage": {
+    "heading": "Try matching the WillowTree employee to their photo.",
+    "button": "Play!"
+  }
+}
