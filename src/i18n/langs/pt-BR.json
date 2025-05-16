@@ -1,8 +1,16 @@
 {
-  "welcome": "Bem vindo ao jogo!",
-  "score": "Sua pontuação é {score}",
-  "homepage": {
+  "title": "O Jogo dos Nomes",
+  "heading": "Tente combinar os funcionários da WillowTree com a foto correta.",
+  "play": "Jogar!",
+  "game": {
+    "continue": "Continue",
+    "return-home": "Voltar ao Início",
+    "score": "Parabéns, você acertou {score}!",
     "heading": "Tente combinar os funcionários da WillowTree com a foto correta.",
-    "button": "Jogar!"
+    "stats": {
+      "correct": "Escolhas Corretas",
+      "incorrect": "Escolhas Incorretas",
+      "average-time": "Tempo Médio de Seleção"
+    }
   }
 }

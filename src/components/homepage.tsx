@@ -18,10 +18,10 @@ export default function HomePage() {
         priority
       />
 
-      <p className="font-light">{t("homepage.heading")}</p>
+      <p className="font-light">{t("heading")}</p>
 
       <Button as={Link} href="/game" className="w-full max-w-[16rem]">
-        {t("homepage.button")}
+        {t("play")}
       </Button>
     </div>
   );

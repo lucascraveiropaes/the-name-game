@@ -1,8 +1,15 @@
 {
-  "welcome": "Welcome to the game!",
-  "score": "Your score is {score}",
-  "homepage": {
-    "heading": "Try matching the WillowTree employee to their photo.",
-    "button": "Play!"
+  "title": "The Name Game",
+  "heading": "Try matching the WillowTree employee to their photo.",
+  "play": "Play!",
+  "game": {
+    "continue": "Continue",
+    "return-home": "Return to Home",
+    "score": "Congratulations, you scored {score}!",
+    "stats": {
+      "correct": "Correct Selections",
+      "incorrect": "Incorrect Selections",
+      "average-time": "Avg Selection Time"
+    }
   }
 }
